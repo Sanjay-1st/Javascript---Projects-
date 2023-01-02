@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            background-color: black;
+            color: white;
+            font-size: 3em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span id="hrs">00</span>
+        <span>:</span>
+        <span id="min">00</span>
+        <span>:</span>
+        <span id="sec">00</span>
+        <span id="session">AM</span>
+    </div>
+
+    <script>
+        function time() {
+            let date = new Date();
+            let hrs = date.getHours();
+            let min = date.getMinutes();
+            let sec = date.getSeconds();
+            let session = document.getElementById('session');
+            if (hrs >= 12) {
+                session.innerHTML = 'PM';
+            } else {
+                session.innerHTML = 'AM';
+            }
+            if (hrs > 12) {
+                hrs = hrs - 12;
+            }
+            document.getElementById('hrs').innerHTML = hrs;
+            document.getElementById('min').innerHTML = min;
+            document.getElementById('sec').innerHTML = sec;
+        }
+        setInterval(time, 10)
+    </script>
+</body>
+
+</html>

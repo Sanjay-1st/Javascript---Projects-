@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo {
+    border: 1px solid red;
+    width: 30vw;
+    min-height: 80vh;
+    height: 80vh auto;
+}
+
+.head {
+    border: 1px solid red;
+}
+
+.head input {
+    width: 79%;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(32, 32, 32);
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
+.head i {
+    background-color: white;
+    color: green;
+    padding: 10px 15px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.text {
+    width: 77%;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(32, 32, 32);
+    border: none;
+    color: white;
+    font-size: 20px;
+    float: left;
+}
+
+.body i {
+    background-color: white;
+    color: red;
+    padding: 10px 15px;
+    font-size: 25px;
+    margin: 10px;
+    margin-top: 14px;
+    cursor: pointer;
+}
